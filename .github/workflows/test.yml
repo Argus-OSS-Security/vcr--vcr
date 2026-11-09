@@ -1,11 +1,12 @@
 name: CI
 
-on:
-  push:
-    branches: [master]
-  pull_request:
-    types: [opened, synchronize, reopened]
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     branches: [master]
+#   pull_request:
+#     types: [opened, synchronize, reopened]
+# 
 jobs:
   cucumber:
     name: "Cucumber / Ruby ${{ matrix.ruby-version }} / Rack ${{ matrix.rack }} / Faraday ${{ matrix.faraday }}"
